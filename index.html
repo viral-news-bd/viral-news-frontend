@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>Viral News | ডার্ক এডিশন</title>
+
+  <!-- SEO -->
+  <meta name="description" content="বাংলার সবচেয়ে ভাইরাল ও ট্রেন্ডিং ডার্ক নিউজ প্ল্যাটফর্ম">
+  <meta name="keywords" content="viral news, bangla news, dark news, trending bangla">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<!-- ================= TOP BAR ================= -->
+<div class="top-bar">
+  <div id="live-date"><i class="far fa-calendar"></i> লোড হচ্ছে...</div>
+  <div id="live-clock"><i class="far fa-clock"></i> ০০:০০:০০</div>
+</div>
+
+<!-- ================= TICKER ================= -->
+<div class="ticker">
+  <div class="ticker-title"><i class="fas fa-fire"></i> ব্রেকিং</div>
+  <div class="ticker-text">
+    &nbsp; ডার্ক মোডে ভাইরাল সব খবর | Premium হলে সম্পূর্ণ বিজ্ঞাপন মুক্ত অভিজ্ঞতা
+  </div>
+</div>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="header-container">
+    <div class="logo">
+        <i class="fas fa-bolt logo-icon"></i>
+        <h1>
+            VIRAL<span>NEWS</span>
+            <small>.fun Edition</small>
+        </h1>
+    </div>
+
+    <form class="search-box" onsubmit="return false;">
+      <input type="text" placeholder="খবর খুঁজুন...">
+      <button><i class="fas fa-search"></i></button>
+    </form>
+  </div>
+</header>
+
+<!-- ================= NAV ================= -->
+<nav>
+  <a href="index.html" class="active">হোম</a>
+  <a href="trending.html">ট্রেন্ডিং</a>
+  <a href="viral-videos.html">ভাইরাল ভিডিও</a>
+  <a href="tech.html">টেক</a>
+  <a href="gossip.html">গসিপ</a>
+  <a href="about.html">আমাদের সম্পর্কে</a>
+</nav>
+
+<!-- ================= MAIN CONTENT ================= -->
+<div class="container">
+
+  <h2 class="section-title">সর্বশেষ ভাইরাল আপডেট</h2>
+
+  <!-- AD SLOT (Non-Premium Users) -->
+  <div class="ad-slot">
+    <p>Advertisement</p>
+    <!-- Adsterra Script Future -->
+  </div>
+
+  <!-- NEWS GRID -->
+  <div class="news-grid">
+
+    <!-- CARD 1 -->
+    <div class="card">
+      <img loading="lazy"
+           src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e"
+           alt="রহস্যময় আলো">
+      <div class="card-content">
+        <p class="category"><i class="fas fa-bolt"></i> ট্রেন্ডিং</p>
+        <h3>রাতের আঁধারে শহরের বুকে নেমে এলো রহস্যময় আলো</h3>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="card">
+      <img loading="lazy"
+           src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
+           alt="নতুন AI চিপ">
+      <div class="card-content">
+        <p class="category"><i class="fas fa-microchip"></i> টেক</p>
+        <h3>নতুন AI চিপ যা মানুষের চিন্তাও পড়তে পারে?</h3>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="card">
+      <img loading="lazy"
+           src="https://images.unsplash.com/photo-1468421201266-fa866b5910c6"
+           alt="হরর মুভি">
+      <div class="card-content">
+        <p class="category"><i class="fas fa-film"></i> বিনোদন</p>
+        <h3>বক্স অফিসে ঝড় তুলেছে নতুন হরর মুভি</h3>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>&copy; 2025 Viral-News.fun | All Rights Reserved</p>
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+<script>
+function toBn(num){
+  return num.toString().replace(/\d/g, d => '০১২৩৪৫৬৭৮৯'[d]);
+}
+
+function updateTime(){
+  const now = new Date();
+  document.getElementById('live-date').innerHTML =
+    '<i class="far fa-calendar"></i> ' +
+    now.toLocaleDateString('bn-BD', {
+      weekday:'long',
+      year:'numeric',
+      month:'long',
+      day:'numeric'
+    });
+
+  document.getElementById('live-clock').innerHTML =
+    '<i class="far fa-clock"></i> ' +
+    toBn(now.getHours()) + ':' +
+    toBn(now.getMinutes()) + ':' +
+    toBn(now.getSeconds());
+}
+
+setInterval(updateTime, 1000);
+updateTime();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>Premium Viral Videos | Viral News</title>
+
+  <!-- SEO (Private Content) -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<!-- ===== HEADER / NAV (Same as index.html) ===== -->
+<div class="top-bar">
+  <div id="live-date"></div>
+  <div id="live-clock"></div>
+</div>
+
+<header>
+  <div class="header-container">
+    <div class="logo">
+        <i class="fas fa-bolt logo-icon"></i>
+        <h1>
+            VIRAL<span>NEWS</span>
+            <small>.fun Edition</small>
+        </h1>
+    </div>
+
+  </div>
+</header>
+
+<nav>
+  <a href="index.html">হোম</a>
+  <a href="trending.html">ট্রেন্ডিং</a>
+  <a href="viral-videos.html" class="active">ভাইরাল ভিডিও</a>
+  <a href="tech.html">টেক</a>
+  <a href="gossip.html">গসিপ</a>
+</nav>
+
+<!-- ===== LOCKED CONTENT ===== -->
+<div class="container">
+
+  <div class="lock-box">
+    <i class="fas fa-lock"></i>
+    <h2>এই কনটেন্টটি প্রিমিয়াম সদস্যদের জন্য</h2>
+    <p style="color:var(--text-gray); margin:15px 0;">
+      ভাইরাল ভিডিও দেখতে হলে লগইন করুন অথবা সাবস্ক্রিপশন কিনুন
+    </p>
+
+    <div class="lock-actions">
+      <a href="login.html"><i class="fas fa-sign-in-alt"></i> লগইন</a>
+      <a href="subscription.html"><i class="fas fa-crown"></i> সাবস্ক্রিপশন কিনুন</a>
+      <a href="viral-unlock.html"><i class="fas fa-key"></i> টোকেন ব্যবহার করুন</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>&copy; 2025 Viral-News.fun</p>
+</footer>
+
+<script>
+function toBn(n){return n.toString().replace(/\d/g,d=>'০১২৩৪৫৬৭৮৯'[d]);}
+function updateTime(){
+  const d=new Date();
+  document.getElementById('live-date').innerHTML=d.toLocaleDateString('bn-BD');
+  document.getElementById('live-clock').innerHTML=toBn(d.getHours())+':'+toBn(d.getMinutes())+':'+toBn(d.getSeconds());
+}
+setInterval(updateTime,1000);updateTime();
+</script>
+
+</body>
+</html>
